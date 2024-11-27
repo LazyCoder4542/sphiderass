@@ -1,0 +1,145 @@
+#site-footer {
+  padding: 2rem var(--page-padding);
+  display: flex;
+  flex-direction: column;
+  gap: 3rem
+}
+#site-footer > .main {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+#site-footer > .main > div:nth-child(1){
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#site-footer > .main > .links {
+  display: flex;
+  gap: 3rem;
+}
+#site-footer > .main > .links > div {
+  flex-basis: 100%;
+  flex-grow: 0;
+  text-wrap: nowrap;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+#site-footer > .main > .links > div > span {
+  color: #F3C720;
+  font-weight: 500;
+}
+#site-footer > .main > .links > div > ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: .5rem;
+}
+#site-footer > .main > .links > div > ul > li{
+  cursor: pointer;
+}
+#site-footer > .main > .links > div > ul > li:hover {
+  text-decoration: underline;
+}
+#site-footer > .main > .socials {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+#site-footer > .main > .socials > div {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: #141414;
+  border-radius: 5px;
+  padding: .5rem .75rem;
+  gap: .5rem;
+  cursor: pointer;
+}
+#site-footer > .main > .socials > div > span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white
+}
+#site-footer > .main > .socials > div > span:nth-child(1) {
+  width: 2rem;
+  padding-right: .5rem;
+  border-right: 3px solid #262626;
+}
+#site-footer > span {
+  text-align: center;
+  border-top: 1px solid #243752;
+  padding-top: 3rem;
+}
+
+
+
+
+.toggle {
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  color: var(--highlight-color)
+}
+.toggle[data-val="1"] > div > div > .ball {
+  right: 0;
+}
+.toggle > span.active {
+  color: var(--text-color);
+}
+.toggle > div {
+  width: 3rem;
+  height: 1.25rem;
+  padding: .375rem;
+  box-sizing: content-box;
+  background-color: var(--highlight-color);
+  border-radius: 99px;
+  cursor: pointer;
+}
+.toggle > div > div {
+  width: 100%;
+  position: relative;
+}
+.toggle > div > div > .ball {
+  position: absolute;
+  height: 1.25rem;
+  width: 1.25rem;
+  border-radius: 99px;
+  aspect-ratio: 1 / 1;
+  background: var(--text-color);
+}
+
+
+
+
+@media screen and (max-width: 1000px) {
+  #site-footer > .main{
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 768px) {
+  #site-footer > .main{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+  }
+  #site-footer > .main > div:nth-child(1) > div{
+    align-self: center;
+    text-align: left;
+  }
+  #site-footer > .main > .socials {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 500px) {
+  #site-footer > .main > .links {
+    gap: 1rem;
+    flex-direction: column;
+  }
+  #site-footer > .main > .links > div {
+    gap: .5rem;
+  }
+}

@@ -1,0 +1,152 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --page-padding: 4rem;
+
+  --bg-color: white;
+  --text-color: #1E1E1E;
+  --highlight-color: rgba(30, 30, 30, 0.25);
+
+  --clr-grey: #E4EEE4
+}
+
+:root[data-theme="dark"] {
+  --bg-color: #191919;
+  --text-color: white;
+  --highlight-color: rgba(245, 235, 235, 0.25);
+
+  --clr-grey: #272727
+}
+a:hover {
+  color: #747bff;
+}
+button {
+  background-color: #f9f9f9;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  background-color: var(--bg-color);
+  font-family: "Figtree", sans-serif;
+  color: var(--text-color)
+}
+h1 {
+  font-size: 4rem;
+  line-height: 4.5rem;
+}
+h2 {
+  font-size: 3rem;
+  line-height: 4.5rem;
+}
+h3 {
+  font-size: 2.25rem;
+}
+h4 {
+  font-size: 1.75rem;
+}
+.btn {
+  display: inline-flex;
+  border-radius: 4px;
+  padding: .5rem;
+  gap: 0.625rem;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: -0.684px;
+  cursor: pointer;
+  transition: filter 250ms;
+}
+.btn:hover {
+  filter: brightness(120%)
+}
+.btn-primary {
+  background-color: #003800;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.btn-secondary {
+  background-color: #FD5025;
+  color: white;
+  font-weight: 500;
+}
+
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+#page {
+  min-height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 1300px) {
+  :root {
+    --page-padding: 3rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  :root {
+    --header-height: 5rem;
+  }
+  h1 {
+    font-size: 3.5rem;
+    line-height: 4.5rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  :root {
+    --page-padding: 2rem;
+  }
+  h1 {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+  h2 {
+    font-size: 2.25rem;
+    line-height: 3rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  :root {
+    --page-padding: 1rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  h2 {
+    font-size: 2.25rem;
+    line-height: 3rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+}
