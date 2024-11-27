@@ -2,6 +2,7 @@ import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } 
 import Home from './pages/landing/home';
 import About from './pages/landing/about';
 import Services from './pages/landing/services';
+import Portfolio from './pages/landing/portfoilio';
 // import Login from './pages/auth/Login';
 // import Register from './pages/auth/Register';
 import Layout from './layout';
@@ -18,6 +19,7 @@ const router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path="about" element={<About />} />
       <Route path="services" element={<Services />} />
+      <Route path="portfolio" element={<Portfolio />} />
       {/* <Route path="login" element={<Login />} />
       <Route path="register" element={<Register />} /> */}
     </Route>
