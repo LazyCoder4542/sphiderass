@@ -15,12 +15,13 @@ function Header() {
           data-open={navOpen}
           tabIndex={0}
           onBlur={() => {
-            setNavOpen(false);
+            setTimeout(() => {
+              setNavOpen(false);
+            }, 200)
           }}
         >
           <div
             className={styles.button}
-            tabIndex={0}
             onClick={() => {
               setNavOpen(!navOpen);
             }}
