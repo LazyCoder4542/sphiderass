@@ -16,7 +16,7 @@ function About() {
       </section>
       <section id={styles.history}>
         <header>
-          <h3>History</h3>
+          <h3 className={styles.heading}>History</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur. Congue pellentesque sem
             pellentesque auctor sodales nulla eget sed justo.Lorem ipsum dolor
@@ -27,7 +27,9 @@ function About() {
           </p>
         </header>
         <div>
-          <img src="" alt="" />
+          <div>
+            <img src="images/illustrations/illus12.jpeg" alt="" />
+          </div>
           <div>
             <h3>We always Deliver the Best</h3>
             <p>
@@ -41,7 +43,7 @@ function About() {
       </section>
       <section id={styles.mission}>
         <header>
-          <h3>Mission Statement</h3>
+          <h3 className={styles.heading}>Mission Statement</h3>
           <p>
             Our mission is to be a Kingdom financier, empowering the fulfillment
             of God's will on earth. We envision becoming the leading tech
@@ -53,23 +55,29 @@ function About() {
       </section>
       <section id={styles.values}>
         <header>
-          <h3>Core Values</h3>
+          <h3 className={styles.heading}>Core Values</h3>
         </header>
         <div>
           <div>
-            <img src="" alt="" />
-            <h4>Loyalty</h4>
-            <p> Amet consectetur. Congue pellentesque sem pellentesque.</p>
+            <img src="images/values.png" alt="" />
+            <div>
+              <h5>Loyalty</h5>
+              <p> Amet consectetur. Congue pellentesque sem pellentesque.</p>
+            </div>
           </div>
           <div>
-            <img src="" alt="" />
-            <h4>Loyalty</h4>
-            <p> Amet consectetur. Congue pellentesque sem pellentesque.</p>
+            <img src="images/values.png" alt="" />
+            <div>
+              <h5>Loyalty</h5>
+              <p> Amet consectetur. Congue pellentesque sem pellentesque.</p>
+            </div>
           </div>
           <div>
-            <img src="" alt="" />
-            <h4>Loyalty</h4>
-            <p> Amet consectetur. Congue pellentesque sem pellentesque.</p>
+            <img src="images/values.png" alt="" />
+            <div>
+              <h5>Loyalty</h5>
+              <p> Amet consectetur. Congue pellentesque sem pellentesque.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -100,7 +108,9 @@ function About() {
           </p>
           <div className="btn btn-primary">Contact Us</div>
         </div>
-        <img src="" alt="" />
+        <div>
+          <img src="images/illustrations/illus13.png" alt="" />
+        </div>
       </section>
     </Page>
   );
