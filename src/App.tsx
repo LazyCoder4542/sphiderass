@@ -9,10 +9,6 @@ interface Route {
   element: JSX.Element;
 }
 
-interface AppProps {
-  routes: Route[];
-}
-
 
 const router = createBrowserRouter(
   createRoutesFromElements(
