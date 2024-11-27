@@ -24,6 +24,7 @@
   --text-color: #1E1E1E;
   --highlight-color: rgba(30, 30, 30, 0.25);
   --highlight-color-2: #F6F8F6;
+  --highlight-color-3: var(--bg-color);
   
   
   --clr-grey: #E4EEE4
@@ -34,6 +35,8 @@
   --text-color: white;
   --highlight-color: rgba(245, 235, 235, 0.25);
   --highlight-color-2: #DAE2DA;
+  --highlight-color-3: #1F261F;
+
 
   --clr-grey: #272727
 }

@@ -17,7 +17,7 @@ function Services() {
       <section id={styles.services}>
         <div>
           <div>
-            <img src="" alt="" />
+            <img src="images/illustrations/illus14.png" alt="" />
             <div>
               <h3>UI/UX Design</h3>
               <p>
@@ -30,7 +30,7 @@ function Services() {
             </div>
           </div>
           <div>
-            <img src="" alt="" />
+            <img src="images/illustrations/illus15.png" alt="" />
             <div>
               <h3>Mobile Development</h3>
               <p>
@@ -43,7 +43,7 @@ function Services() {
             </div>
           </div>
           <div>
-            <img src="" alt="" />
+            <img src="images/illustrations/illus16.png" alt="" />
             <div>
               <h3>IT Support Services </h3>
               <p>
@@ -62,37 +62,39 @@ function Services() {
         <header>
           <h3>Why choose us</h3>
         </header>
-        <div>
-          <div>
-            <img src="" alt="" />
-            <h3>Expertise</h3>
+        <div className={styles.cards}>
+          <div className={styles.card}>
+            <img src="images/expertise.png" alt="" />
+
+            <h4>Expertise</h4>
             <p>
               Our team consists of industry experts with years of hands-on
               experience, ensuring top-tier solutions that meet your needs.
             </p>
           </div>
-          <div>
-            <img src="" alt="" />
-            <h3>Tailored Solutions</h3>
+          <div className={styles.card}>
+            <img src="images/solutions.png" alt="" />
+
+            <h4>Tailored Solutions</h4>
             <p>
-              We don't believe in one-size-fits-all. Every project is
-              customized to align with your specific goals and business
-              objectives.
+              We don't believe in one-size-fits-all. Every project is customized
+              to align with your specific goals and business objectives.
             </p>
           </div>
-          <div>
-            <img src="" alt="" />
-            <h3>Proven Track Record</h3>
+          <div className={styles.card}>
+            <img src="images/record.png" alt="" />
+            <h4>Proven Track Record</h4>
             <p>
-              With a portfolio of successful projects and satisfied clients,
-              our results speak for themselves.
+              With a portfolio of successful projects and satisfied clients, our
+              results speak for themselves.
             </p>
           </div>
-          <div>
-            <img src="" alt="" />
-            <h3>Visuals</h3>
+          <div className={styles.card}>
+            <img src="images/visuals.png" alt="" />
+            <h4>Visuals</h4>
             <p>
-            We craft visually engaging designs that not only look great but also enhance user experience and brand identity.
+              We craft visually engaging designs that not only look great but
+              also enhance user experience and brand identity.
             </p>
           </div>
         </div>
@@ -101,13 +103,14 @@ function Services() {
         <div>
           <header>
             <h3>Send us a message</h3>
-            <p>Please fill out the form below and we'll get back to you as soon as possible!</p>
+            <p>
+              Please fill out the form below and we'll get back to you as soon
+              as possible!
+            </p>
           </header>
-          <div>
-            this is a form
-          </div>
+          <div>this is a form</div>
         </div>
-        <img src="" alt="" />
+        <img src="images/illustrations/illus17.jpeg" alt="" />
       </section>
     </Page>
   );
