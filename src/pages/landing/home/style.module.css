@@ -214,7 +214,7 @@
   display: flex;
   width: 100%;
   aspect-ratio: 416 / 307;
-  mask-image: url("icons/mask.svg");
+  mask-image: url("/icons/mask.svg");
   mask-repeat: no-repeat;
   mask-size: 100% 100%;
 }
