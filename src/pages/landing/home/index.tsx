@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import {
   AWSIcon,
   FigmaIcon,
@@ -12,6 +13,7 @@ import { useTheme } from "../../../context/theme";
 import styles from "./style.module.css";
 const Home = () => {
   const { mode } = useTheme();
+  const navigate = useNavigate();
   return (
     <Page pageStyle={styles.page}>
       <section id={styles.hero}>
@@ -146,7 +148,12 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className={`${styles.see_more} btn`}>
+          <div
+            className={`${styles.see_more} btn`}
+            onClick={() => {
+              navigate("/services");
+            }}
+          >
             <span>See More</span>
             <span>
               <svg
@@ -257,7 +264,12 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className={`${styles.see_more} btn`}>
+          <div
+            className={`${styles.see_more} btn`}
+            onClick={() => {
+              navigate("/portfolio");
+            }}
+          >
             <span>View my projects</span>
             <span>
               <svg
@@ -409,25 +421,25 @@ const Home = () => {
         <div className={`${styles.see_more} btn`}>
           <span>Visit our blog page</span>
           <span>
-              <svg
-                width="25"
-                height="26"
-                viewBox="0 0 25 26"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g id="Frame">
-                  <g id="Group">
-                    <path
-                      id="Vector"
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M9.37331 5.27734L17.0962 13.0003L9.37331 20.7232L7.90039 19.2503L14.1504 13.0003L7.90039 6.75026L9.37331 5.27734Z"
-                      fill="#FCFCFC"
-                    />
-                  </g>
+            <svg
+              width="25"
+              height="26"
+              viewBox="0 0 25 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="Frame">
+                <g id="Group">
+                  <path
+                    id="Vector"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M9.37331 5.27734L17.0962 13.0003L9.37331 20.7232L7.90039 19.2503L14.1504 13.0003L7.90039 6.75026L9.37331 5.27734Z"
+                    fill="#FCFCFC"
+                  />
                 </g>
-              </svg>
+              </g>
+            </svg>
           </span>
         </div>
       </section>
