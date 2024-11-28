@@ -1,0 +1,50 @@
+#team {
+  padding: 10rem var(--page-padding);
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+}
+#team > header > h2 > span {
+  background: var(--gradient, linear-gradient(144deg, #F7BD5F -12.89%, #003800 123.01%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#team > div {
+  max-width: 1200px;
+  display: grid;
+  gap: 4rem 3rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+#team > div > .card > div:nth-child(1) > img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+
+@media screen and (max-width: 1000px ) {
+  #team {
+    padding: 4rem var(--page-padding) 8rem;
+  }
+}
+@media screen and (max-width: 767px ) {
+  #team > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 500px ) {
+  #team {
+    padding: 2rem var(--page-padding) 8rem;
+  }
+  #team > div {
+    gap: 2rem 1rem;
+    /* grid-template-columns: 2fr; */
+  }
+}
+@media screen and (max-width: 380px ) {
+  #team > div {
+    grid-template-columns: 1fr;
+  }
+}

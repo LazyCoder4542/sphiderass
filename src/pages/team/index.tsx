@@ -6,30 +6,111 @@ function Team() {
     <Page pageStyle={styles.page}>
       <section id={styles.team}>
         <header>
-          <h2>Meet Our Amazing Team</h2>
+          <h2>Meet Our <span>Amazing</span> Team</h2>
         </header>
         <div>
-          <div>
+          <div className={styles.card}>
             <div>
-              <img src="images/profile/p1.png" alt="" />
+              <img src="images/profile/p1.jpeg" alt="" />
             </div>
             <div>
               <h5>John Doe</h5>
               <span>Founder & CEO</span>
             </div>
           </div>
-          <div>
+          <div className={styles.card}>
             <div>
-              <img src="images/profile/p2.png" alt="" />
+              <img src="images/profile/p2.jpeg" alt="" />
             </div>
             <div>
               <h5>John Doe</h5>
               <span>Chief Operating Officer</span>
             </div>
           </div>
-          <div>
+          <div className={styles.card}>
             <div>
-              <img src="images/profile/p3.png" alt="" />
+              <img src="images/profile/p3.jpeg" alt="" />
+            </div>
+            <div>
+              <h5>John Doe</h5>
+              <span>Human Resource Manager</span>
+            </div>
+          </div>
+          <div className={styles.card}>
+            <div>
+              <img src="images/profile/p1.jpeg" alt="" />
+            </div>
+            <div>
+              <h5>John Doe</h5>
+              <span>Founder & CEO</span>
+            </div>
+          </div>
+          <div className={styles.card}>
+            <div>
+              <img src="images/profile/p2.jpeg" alt="" />
+            </div>
+            <div>
+              <h5>John Doe</h5>
+              <span>Chief Operating Officer</span>
+            </div>
+          </div>
+          <div className={styles.card}>
+            <div>
+              <img src="images/profile/p3.jpeg" alt="" />
+            </div>
+            <div>
+              <h5>John Doe</h5>
+              <span>Human Resource Manager</span>
+            </div>
+          </div>
+          <div className={styles.card}>
+            <div>
+              <img src="images/profile/p1.jpeg" alt="" />
+            </div>
+            <div>
+              <h5>John Doe</h5>
+              <span>Founder & CEO</span>
+            </div>
+          </div>
+          <div className={styles.card}>
+            <div>
+              <img src="images/profile/p2.jpeg" alt="" />
+            </div>
+            <div>
+              <h5>John Doe</h5>
+              <span>Chief Operating Officer</span>
+            </div>
+          </div>
+          <div className={styles.card}>
+            <div>
+              <img src="images/profile/p3.jpeg" alt="" />
+            </div>
+            <div>
+              <h5>John Doe</h5>
+              <span>Human Resource Manager</span>
+            </div>
+          </div>
+          <div className={styles.card}>
+            <div>
+              <img src="images/profile/p1.jpeg" alt="" />
+            </div>
+            <div>
+              <h5>John Doe</h5>
+              <span>Founder & CEO</span>
+            </div>
+          </div>
+          <div className={styles.card}>
+            <div>
+              <img src="images/profile/p2.jpeg" alt="" />
+            </div>
+            <div>
+              <h5>John Doe</h5>
+              <span>Chief Operating Officer</span>
+            </div>
+          </div>
+          <div className={styles.card}>
+            <div>
+              <img src="images/profile/p3.jpeg" alt="" />
             </div>
             <div>
               <h5>John Doe</h5>
@@ -43,3 +124,44 @@ function Team() {
 }
 
 export default Team;
+
+export function Directors() {
+  return (
+    <Page pageStyle={styles.page}>
+      <section id={styles.team}>
+        <header>
+          <h2>Meet Our Amazing Team</h2>
+        </header>
+        <div>
+          <div className={styles.card}>
+            <div>
+              <img src="images/profile/p1.jpeg" alt="" />
+            </div>
+            <div>
+              <h5>John Doe</h5>
+              <span>Founder & CEO</span>
+            </div>
+          </div>
+          <div className={styles.card}>
+            <div>
+              <img src="images/profile/p2.jpeg" alt="" />
+            </div>
+            <div>
+              <h5>John Doe</h5>
+              <span>Chief Operating Officer</span>
+            </div>
+          </div>
+          <div className={styles.card}>
+            <div>
+              <img src="images/profile/p3.jpeg" alt="" />
+            </div>
+            <div>
+              <h5>John Doe</h5>
+              <span>Human Resource Manager</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </Page>
+  );
+}
