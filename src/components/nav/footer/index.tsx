@@ -1,11 +1,12 @@
 import { useTheme } from "../../../context/theme";
 import styles from "./style.module.css";
 function Footer() {
+  const {mode} = useTheme()
   return (
     <footer id={styles["site-footer"]}>
       <div className={styles.main}>
         <div>
-          <h1>LOGO</h1>
+          <img width="200px" src={`images/logo_${mode}.svg`} alt="" />
           <p>
             We build readymade websites, mobile applications, and elaborate
             online business services.
