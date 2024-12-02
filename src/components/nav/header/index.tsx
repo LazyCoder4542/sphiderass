@@ -10,7 +10,7 @@ function Header() {
     <>
       <header id={styles["site-header"]}>
         <div className={styles.logo}>
-          <img src={`images/logo_${mode}.svg`} alt="" />
+          <img src={`/images/logo_${mode}.svg`} alt="" />
         </div>
         <nav
           data-open={navOpen}
@@ -183,15 +183,15 @@ function Header() {
             </ul>
             <div>
               <div>
-                <img src="icons/search.svg" alt="search" />
+                <img src="/icons/search.svg" alt="search" />
               </div>
               <div className="btn btn-primary"
               onClick={() => {
-                navigate("jobs")
+                navigate("/jobs")
               }}>
                 Work with us
                 <span>
-                  <img src="icons/arrow.svg" alt="" />
+                  <img src="/icons/arrow.svg" alt="" />
                 </span>
               </div>
             </div>

@@ -4,6 +4,7 @@ import About from './pages/landing/about';
 import Services from './pages/landing/services';
 import Portfolio from './pages/landing/portfoilio';
 import Blogs from './pages/blogs';
+import Blog from './pages/blog';
 import Team from './pages/team';
 import Work from './pages/work';
 // import Login from './pages/auth/Login';
@@ -24,6 +25,7 @@ const router = createBrowserRouter(
       <Route path="services" element={<Services />} />
       <Route path="portfolio" element={<Portfolio />} />
       <Route path="blogs" element={<Blogs />} />
+      <Route path="blog/*" element={<Blog />} />
       <Route path="team" element={<Team />} />
       <Route path="jobs" element={<Work />} />
       {/* <Route path="login" element={<Login />} />

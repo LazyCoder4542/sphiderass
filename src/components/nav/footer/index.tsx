@@ -6,7 +6,7 @@ function Footer() {
     <footer id={styles["site-footer"]}>
       <div className={styles.main}>
         <div>
-          <img width="200px" src={`images/logo_${mode}.svg`} alt="" />
+          <img width="200px" src={`/images/logo_${mode}.svg`} alt="" />
           <p>
             We build readymade websites, mobile applications, and elaborate
             online business services.
@@ -49,25 +49,25 @@ function Footer() {
         <div className={styles.socials}>
           <div>
             <span>
-              <img src="icons/social/facebook.svg" alt="facebook" />
+              <img src="/icons/social/facebook.svg" alt="facebook" />
             </span>
             <span>Facebook</span>
           </div>
           <div>
             <span>
-              <img src="icons/social/linkedin.svg" alt="linkedin" />
+              <img src="/icons/social/linkedin.svg" alt="linkedin" />
             </span>
             <span>Linkedin</span>
           </div>
           <div>
             <span>
-              <img src="icons/social/twitter.svg" alt="twitter" />
+              <img src="/icons/social/twitter.svg" alt="twitter" />
             </span>
             <span>Twitter</span>
           </div>
           <div>
             <span>
-              <img src="icons/social/instagram.svg" alt="instagram" />
+              <img src="/icons/social/instagram.svg" alt="instagram" />
             </span>
             <span>Instagram</span>
           </div>
