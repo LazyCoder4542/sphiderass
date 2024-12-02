@@ -1,10 +1,11 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import styles from "./style.module.css";
 import { useState } from "react";
 import { useTheme } from "../../../context/theme";
 function Header() {
   const [navOpen, setNavOpen] = useState(false);
   const {mode} = useTheme();
+  const navigate = useNavigate()
   return (
     <>
       <header id={styles["site-header"]}>
@@ -184,7 +185,10 @@ function Header() {
               <div>
                 <img src="icons/search.svg" alt="search" />
               </div>
-              <div className="btn btn-primary">
+              <div className="btn btn-primary"
+              onClick={() => {
+                navigate("jobs")
+              }}>
                 Work with us
                 <span>
                   <img src="icons/arrow.svg" alt="" />

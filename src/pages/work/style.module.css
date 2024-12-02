@@ -1,0 +1,200 @@
+#join {
+  padding: 10rem var(--page-padding) 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+#join > header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+}
+#join > header > p {
+  color: #666A66;
+}
+#join > header > div {
+  margin-top: 1rem;
+  border-radius: 99px;
+  padding-inline: 1rem;
+}
+#join > div {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 100px;
+}
+#join > div > div {
+  flex-basis: 100%;
+  aspect-ratio: 1 / 2;
+}
+#join > div > div:nth-child(odd) {
+  transform: translateY(100px);
+}
+#join > div > div > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#why {
+  display: flex;
+  padding: 5rem var(--page-padding);
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+#why > header {
+  text-align: center;
+}
+#why > div {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  max-width: 1200px;
+}
+#why > div > div {
+  flex-basis: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  gap: .5rem;
+  max-width: 350px;
+  text-align: center;
+}
+.job__section {
+  display: flex;
+  padding: 3rem var(--page-padding);
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.job__section > header {
+  text-align: center;
+}
+.job__section > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 100%;
+}
+:root[data-theme="dark"] {
+  .job__section > div > .job__card {
+    border: 1px solid rgba(0, 56, 0, 0.16);
+    background: rgba(0, 56, 0, 0.16);
+  }
+  
+}
+.job__section > div > .job__card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 2rem;
+  padding: 1.25rem;
+  border-radius: 7px;
+  border: 1px solid rgba(0, 56, 0, 0.05);
+  background: rgba(0, 56, 0, 0.05);
+}
+.job__section > div > .job__card > *:nth-child(even) {
+  text-align: right;
+  align-self: flex-end;
+  justify-content: flex-end;
+}
+.job__section > div > .job__card > *:nth-child(n+3) {
+  align-content: flex-end;
+}
+.job__section > div > .job__card > .tl > h5 {
+  background: linear-gradient(90deg, #BB720D 0%, #1A4C1A 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.job__section > div > .job__card > .tr {
+  display: flex;
+  align-items: center;
+  gap: .25rem .5rem;
+
+  justify-self: flex-end;
+  flex-wrap: wrap;
+}
+.job__section > div > .job__card > .tr > span:nth-child(1) {
+  color: #BD7500;
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: -1px;
+}
+.job__section > div > .job__card > .tr > span:nth-child(2) {
+  color: #666A66;
+}
+.job__section > div > .job__card > .bl {
+  display: flex;
+  gap: .25rem 1rem;
+  align-items: center;
+  text-wrap: nowrap;
+  flex-wrap: wrap;
+
+}
+.job__section > div > .job__card > .bl > div {
+  display: flex;
+  align-items: center;
+  gap: .5rem
+}
+.job__section > div > .job__card > .bl > div > span {
+  display: flex;
+}
+
+
+@media screen and (max-width: 900px) {
+  #join {
+    padding: 5rem var(--page-padding);
+  }
+  #join > div > div:nth-child(n+5) {
+    display: none;
+  }
+  #why > div > div {
+    gap: .5rem;
+    padding: 0;
+  }
+  #why > div > div > img {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 768px) {
+  #join {
+    padding: 5rem var(--page-padding);
+    gap: 2rem;
+  }
+  #join > div > div:nth-child(n+5) {
+    display: none;
+  }
+  .job__section > div {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  #why > div {
+    align-items: center;
+    flex-direction: column;
+  }
+  #why > div > div > img {
+    width: 20%;
+  }
+}
+@media screen and (max-width: 500px) {
+  #join {
+    padding: 3rem var(--page-padding);
+  }
+  #join > div > div:nth-child(n+4) {
+    display: none;
+  }
+  #why {
+    padding: 3rem var(--page-padding);
+  }
+  .job__section {
+    padding: 3rem var(--page-padding);
+  }
+}
