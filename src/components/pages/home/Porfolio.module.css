@@ -38,9 +38,26 @@
   color: #e1b023;
   border-radius: 12px;
 }
-#portfolio > div > .samples {
+#portfolio > div > .samples > :global(div:not(.is-active)) :global(.splide__list) {
   display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
   gap: 2rem;
+}
+#portfolio > div > .samples > :global(div:not(.is-active)) :global(.splide__list) :global(.splide__slide) {
+  flex-basis: 100%;
+  flex-shrink: unset;
+  flex-grow: 0;
+}
+
+#portfolio > div > .samples > :global(div:not(.is-active)) :global(.splide__list) :global(.splide__slide):nth-child(1) {
+  margin-top: 16rem;
+}
+#portfolio > div > .samples > :global(div:not(.is-active)) :global(.splide__list) :global(.splide__slide):nth-child(2) {
+  margin-top: 8rem;
+}
+#portfolio > div > .samples > :global(div.is-active) .sample {
+  max-width: none;
 }
 #portfolio > div > .samples > div {
   display: grid;
@@ -61,6 +78,7 @@
 }
 #portfolio > div > .samples .sample > div {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   color: #bd7500;
   font-weight: 500;
@@ -70,12 +88,6 @@
 #portfolio > div > .samples .sample > div {
   transition-property: color, background-color;
   transition-duration: 500ms;
-}
-#portfolio > div > .samples .sample:nth-child(1) {
-  margin-top: 16rem;
-}
-#portfolio > div > .samples .sample:nth-child(2) {
-  margin-top: 8rem;
 }
 
 @media screen and (max-width: 1024px ) {
