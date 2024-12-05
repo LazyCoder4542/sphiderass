@@ -1,5 +1,6 @@
 import styles from "./Testimonial.module.css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
+import '@splidejs/react-splide/css/core';
 function Testimonials() {
   return (
     <section id={styles.testimonials}>
