@@ -12,10 +12,10 @@ import Page from "../../../components/layouts/page";
 import Testimonials from "../../../components/pages/home/Testimonials";
 import { useTheme } from "../../../context/theme";
 import styles from "./style.module.css";
+import ContactForm from "@/components/atom/ContactForm";
 const Home = () => {
   const { mode } = useTheme();
   const navigate = useNavigate();
-
   return (
     <Page pageStyle={styles.page}>
       <section id={styles.hero}>
@@ -458,9 +458,3 @@ const Home = () => {
 };
 
 export default Home;
-
-function ContactForm() {
-  return <>This is a form</>;
-}
-
-
