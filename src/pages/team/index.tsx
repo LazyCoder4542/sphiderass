@@ -1,4 +1,4 @@
-import Page from "../../components/page";
+import Page from "../../components/layouts/page";
 import styles from "./style.module.css";
 
 function Team() {

@@ -8,12 +8,14 @@ import {
   SendGridIcon,
   VueIcon,
 } from "../../../assets/icon";
-import Page from "../../../components/page";
+import Page from "../../../components/layouts/page";
+import Testimonials from "../../../components/pages/home/Testimonials";
 import { useTheme } from "../../../context/theme";
 import styles from "./style.module.css";
 const Home = () => {
   const { mode } = useTheme();
   const navigate = useNavigate();
+
   return (
     <Page pageStyle={styles.page}>
       <section id={styles.hero}>
@@ -295,37 +297,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section id={styles.testimonials}>
-        <header>
-          <h2>What Our Clients Are Saying</h2>
-        </header>
-        <div>
-          <Testimonial
-            name="Dunsin Oyekan"
-            image="images/profile/Dunsin_Oyekan.jpeg"
-            designation="CEO of The Great Commission"
-            testimony="Sphiderass is a remarkable company that truly values excellence and integrity. Their team is incredibly professional, and they consistently go above and beyond. They always meet deadlines, offering outstanding value throughout the entire process."
-          />
-          <Testimonial
-            name="Dunsin Oyekan"
-            image="images/profile/Dunsin_Oyekan.jpeg"
-            designation="CEO of The Great Commission"
-            testimony="Sphiderass is a remarkable company that truly values excellence and integrity. Their team is incredibly professional, and they consistently go above and beyond. They always meet deadlines, offering outstanding value throughout the entire process."
-          />
-          <Testimonial
-            name="Dunsin Oyekan"
-            image="images/profile/Dunsin_Oyekan.jpeg"
-            designation="CEO of The Great Commission"
-            testimony="Sphiderass is a remarkable company that truly values excellence and integrity. Their team is incredibly professional, and they consistently go above and beyond. They always meet deadlines, offering outstanding value throughout the entire process."
-          />
-          <Testimonial
-            name="Dunsin Oyekan"
-            image="images/profile/Dunsin_Oyekan.jpeg"
-            designation="CEO of The Great Commission"
-            testimony="Sphiderass is a remarkable company that truly values excellence and integrity. Their team is incredibly professional, and they consistently go above and beyond. They always meet deadlines, offering outstanding value throughout the entire process."
-          />
-        </div>
-      </section>
+      <Testimonials />
       <section id={styles.learn}>
         <header>
           <h2>Learn with Sphiderass</h2>
@@ -487,28 +459,8 @@ const Home = () => {
 
 export default Home;
 
-interface ITestimony {
-  name: string;
-  image: string;
-  designation: string;
-  testimony: string;
-}
-
-function Testimonial({ name, image, designation, testimony }: ITestimony) {
-  return (
-    <div className={styles.testimonial}>
-      <div>
-        <img src={image}></img>
-        <span>
-          <h5>{name}</h5>
-          <p>{designation}</p>
-        </span>
-      </div>
-      <p>{testimony}</p>
-    </div>
-  );
-}
-
 function ContactForm() {
   return <>This is a form</>;
 }
+
+

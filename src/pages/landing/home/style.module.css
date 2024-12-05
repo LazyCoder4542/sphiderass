@@ -322,28 +322,6 @@
   margin-top: 8rem;
 }
 
-#testimonials {
-  padding: 3rem var(--page-padding);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-}
-#testimonials > header {
-  align-self: center;
-  text-align: center;
-  max-width: 800px;
-}
-#testimonials > div {
-  max-width: 1050px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  padding-inline: 1rem;
-}
-#testimonials > div > * {
-  flex-basis: 40%;
-}
 
 #learn {
   padding: 3rem var(--page-padding);
@@ -552,40 +530,7 @@
   fill: currentColor
 }
 
-.testimonial {
-  display: flex;
-  padding: 40px 44px;
-  flex-direction: column;
-  background-color: var(--clr-grey);
-  border-radius: 40px;
-  gap: 2rem;
-}
-.testimonial > div {
-  display: flex;
-  gap: 1rem;
-}
-.testimonial > div > img {
-  width: 3rem;
-  height: 3rem;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 99px;
-}
-.testimonial > div > span {
-  flex: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.testimonial > div > span > h5 {
-  font-size: 1.25rem;
-}
-.testimonial > div > span > p {
-  font-size: 12px;
-}
-.testimonial > p {
-  font-size: 1rem;
-}
+
 
 @media screen and (max-width: 1024px ) {
   #portfolio > div > nav {
@@ -662,10 +607,6 @@
     margin: 0 !important;
     max-width: 400px;
   }
-  #testimonials > div {
-    gap: 1.5rem;
-    padding: 0;
-  }
   #learn > div {
     gap: 3rem;
     padding-inline: 0;
@@ -695,33 +636,11 @@
   }
 
 
-  .testimonial {
-    padding: 2rem;
-    gap: 1rem;
-    border-radius: 16px;
-  }
-  .testimonial > div > span > p {
-    font-size: 10px;
-  }
-  .testimonial > p {
-    font-size: 0.75rem;
-  }
 }
 @media screen and (max-width: 600px ) {
   #about > div {
     grid-template-columns: 1fr;
     gap: 2rem;
-  }
-  .testimonial {
-    padding: 1rem;
-    gap: 1rem;
-    border-radius: 16px;
-  }
-  .testimonial > div > span > p {
-    font-size: 10px;
-  }
-  .testimonial > p {
-    font-size: 0.75rem;
   }
 }
 
@@ -754,9 +673,6 @@
   #learn > div > .tile > div:nth-child(2) > img {
     width: 100%;
     aspect-ratio: 3 / 1;
-  }
-  #testimonials > div {
-    grid-template-columns: 1fr;
   }
   #blog > .blogs {
     flex-direction: column;
