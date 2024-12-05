@@ -101,6 +101,34 @@ h5 {
   font-weight: 500;
 }
 
+.see_more {
+  align-self: center;
+  position: relative;
+  /* background-color: red; */
+}
+.see_more:hover::before {
+  width: 100%;
+}
+.see_more::before {
+  left: 0;
+  z-index: 0;
+  content: "";
+  display: block;
+  height: 42px;
+  width: 42px;
+  position: absolute;
+  border-radius: 99px;
+  background-color: var(--highlight-color);
+  transition: width 500ms;
+}
+.see_more > span {
+  z-index: 1;
+  display: flex;
+}
+.see_more > span svg path {
+  fill: currentColor
+}
+
 #root {
   width: 100%;
   min-height: 100%;
