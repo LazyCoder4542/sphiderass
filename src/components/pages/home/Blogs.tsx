@@ -1,5 +1,6 @@
-import styles from "./Blogs.module.css"
-
+import styles from "./Blogs.module.css";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css/core";
 function Blogs() {
   return (
     <section id={styles.blog}>
@@ -12,44 +13,63 @@ function Blogs() {
       </header>
       <h3>Recent Blog Posts</h3>
       <div className={styles.blogs}>
-        <div className={styles.blog}>
-          <img src="images/illustrations/illus8.jpeg" alt="" />
-          <div>
-            <div>
-              <span>Design</span>
-              <h4>
-                UX review presentations
-                <span>
-                  <img src="icons/arr_up_right.svg" alt="" />
-                </span>
-              </h4>
-              <p>
-                How do you create compelling presentations that wow your
-                colleagues and impress your managers?
-              </p>
+        <Splide
+          options={{
+            arrows: false,
+            // pagination: false,
+            drag: true,
+            gap: "1.5rem",
+            mediaQuery: "min",
+            breakpoints: {
+              640: {
+                destroy: true,
+              },
+            },
+          }}
+        >
+          <SplideSlide>
+            <div className={styles.blog}>
+              <img src="images/illustrations/illus8.jpeg" alt="" />
+              <div>
+                <div>
+                  <span>Design</span>
+                  <h4>
+                    UX review presentations
+                    <span>
+                      <img src="icons/arr_up_right.svg" alt="" />
+                    </span>
+                  </h4>
+                  <p>
+                    How do you create compelling presentations that wow your
+                    colleagues and impress your managers?
+                  </p>
+                </div>
+                <div className={`${styles.btn} btn btn-primary`}>Read More</div>
+              </div>
             </div>
-            <div className={`${styles.btn} btn btn-primary`}>Read More</div>
-          </div>
-        </div>
-        <div className={styles.blog}>
-          <img src="images/illustrations/illus9.jpeg" alt="" />
-          <div>
-            <div>
-              <span>Product</span>
-              <h4>
-                Migrating to Linear 101
-                <span>
-                  <img src="icons/arr_up_right.svg" alt="" />
-                </span>
-              </h4>
-              <p>
-                Linear helps streamline software projects, sprints, tasks, and
-                bug tracking. Here’s how to get started.
-              </p>
+          </SplideSlide>
+          <SplideSlide>
+            <div className={styles.blog}>
+              <img src="images/illustrations/illus9.jpeg" alt="" />
+              <div>
+                <div>
+                  <span>Product</span>
+                  <h4>
+                    Migrating to Linear 101
+                    <span>
+                      <img src="icons/arr_up_right.svg" alt="" />
+                    </span>
+                  </h4>
+                  <p>
+                    Linear helps streamline software projects, sprints, tasks, and
+                    bug tracking. Here’s how to get started.
+                  </p>
+                </div>
+                <div className={`${styles.btn} btn btn-primary`}>Read More</div>
+              </div>
             </div>
-            <div className={`${styles.btn} btn btn-primary`}>Read More</div>
-          </div>
-        </div>
+          </SplideSlide>
+        </Splide>
       </div>
       <div className={`see_more btn`}>
         <span>Visit our blog page</span>

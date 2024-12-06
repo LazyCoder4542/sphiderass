@@ -29,17 +29,21 @@
 }
 #testimonials > :global(div.is-active) :global(.splide__pagination) {
   gap: .5rem;
+  margin-top: 1rem;
 }
 #testimonials > :global(div.is-active) :global(.splide__pagination) :global(button) {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   outline: none;
   border: none;
-  background-color: #dddddd;
+  /* background-color: #dddddd; */
+  background-color: var(--text-color);
+  filter: brightness(200%);
+  opacity: 0.6;
   border-radius: 100%;
 }
 #testimonials > :global(div.is-active) :global(.splide__pagination) :global(button.is-active) {
-  background-color: #aaaaaa;
+  opacity: 1;
 }
 
 .testimonial {
