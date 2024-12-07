@@ -9,11 +9,14 @@ function Testimonials() {
       </header>
       <Splide
         options={{
+          type: 'loop',
           arrows: false,
           // pagination: false,
           drag: true,
           gap: "1.5rem",
           mediaQuery: "min",
+          perPage: 1,
+          autoplay: true,
           breakpoints: {
             640: {
               destroy: true,
