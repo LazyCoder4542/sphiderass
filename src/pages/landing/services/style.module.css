@@ -132,8 +132,13 @@
 #contact {
   display: flex;
   padding: 4rem var(--page-padding);
+  gap: 2rem;
+  align-items: center;
 }
 #contact > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   flex: 1;
 }
 #contact > img {

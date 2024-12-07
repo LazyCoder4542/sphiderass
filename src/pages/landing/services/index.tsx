@@ -1,3 +1,4 @@
+import ContactForm from "@/components/atom/ContactForm";
 import Page from "../../../components/layouts/page";
 import styles from "./style.module.css";
 function Services() {
@@ -108,7 +109,9 @@ function Services() {
               as possible!
             </p>
           </header>
-          <div>this is a form</div>
+          <div>
+            <ContactForm />
+          </div>
         </div>
         <img src="images/illustrations/illus17.jpeg" alt="" />
       </section>
