@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import styles from "./Porfolio.module.css";
+import styles from "./Portfolio.module.css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css/core";
 function Portfolio() {
@@ -16,14 +16,40 @@ function Portfolio() {
       </header>
       <div>
         <nav>
-          <ul>
-            <li className={styles.selected}>All</li>
-            <li>Websites</li>
-            <li>Mobile apps</li>
-            <li>Social media Branding</li>
-            <li>Graphic Design</li>
-            <li>SEO</li>
-          </ul>
+          <Splide
+            options={{
+              arrows: false,
+              pagination: false,
+              drag: true,
+              gap: "1.5rem",
+              mediaQuery: "min",
+              autoWidth: true,
+              // breakpoints: {
+              //   640: {
+              //     destroy: true,
+              //   },
+              // },
+            }}
+          >
+            <SplideSlide>
+              <span className={styles.selected}>All</span>
+            </SplideSlide>
+            <SplideSlide>
+              <span>Websites</span>
+            </SplideSlide>
+            <SplideSlide>
+              <span>Mobile apps</span>
+            </SplideSlide>
+            <SplideSlide>
+              <span>Social media Branding</span>
+            </SplideSlide>
+            <SplideSlide>
+              <span>Graphic Design</span>
+            </SplideSlide>
+            <SplideSlide>
+              <span>SEO</span>
+            </SplideSlide>
+          </Splide>
         </nav>
         <div className={styles.samples}>
           <Splide
@@ -31,7 +57,6 @@ function Portfolio() {
               arrows: false,
               // pagination: false,
               drag: true,
-              gap: "1.5rem",
               mediaQuery: "min",
               breakpoints: {
                 640: {

@@ -21,19 +21,17 @@
   padding: 20px;
   align-self: center;
 }
-#portfolio > div > nav > ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+#portfolio > div > nav > div {
+  display: grid;
 }
-#portfolio > div > nav > ul > li {
+#portfolio > div > nav > div span {
   text-wrap: nowrap;
   color: #002300;
   padding: 15px 25px;
   font-weight: 600;
+  display: block;
 }
-#portfolio > div > nav > ul > li.selected {
+#portfolio > div > nav > div span.selected {
   background-color: #003800;
   color: #e1b023;
   border-radius: 12px;
