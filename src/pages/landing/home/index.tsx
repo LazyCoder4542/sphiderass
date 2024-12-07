@@ -1,13 +1,4 @@
 import { useNavigate } from "react-router-dom";
-import {
-  AWSIcon,
-  FigmaIcon,
-  IBMIcon,
-  MetaIcon,
-  NextIcon,
-  SendGridIcon,
-  VueIcon,
-} from "../../../assets/icon";
 import Page from "../../../components/layouts/page";
 import Testimonials from "../../../components/pages/home/Testimonials";
 import { useTheme } from "../../../context/theme";
@@ -15,51 +6,13 @@ import styles from "./style.module.css";
 import ContactForm from "@/components/atom/ContactForm";
 import Portfolio from "@/components/pages/home/Portfolio";
 import Blogs from "@/components/pages/home/Blogs";
+import Hero from "@/components/pages/home/Hero";
 const Home = () => {
   const { mode } = useTheme();
   const navigate = useNavigate();
   return (
     <Page pageStyle={styles.page}>
-      <section id={styles.hero}>
-        <header>
-          <h1>
-            Transform your ideas into Digital <span>Experiences</span>
-          </h1>
-          <p>
-            at Sphiderass we are dedicated to helping businesses thrive in the
-            ever evolving digital spaces
-          </p>
-          <div className={`${styles.btn} btn btn-primary`}>
-            Explore our Services
-          </div>
-        </header>
-        <div className={styles.tech}>
-          <span>
-            <FigmaIcon />
-          </span>
-          <span>
-            <NextIcon />
-          </span>
-          <span>
-            <VueIcon />
-          </span>
-          <span>
-            <AWSIcon />
-          </span>
-          <span>
-            <IBMIcon />
-          </span>
-          <span>
-            <SendGridIcon />
-          </span>
-          <span>
-            <MetaIcon />
-          </span>
-          <span>
-            <img src="icons/tech/the_assisials.png"></img>
-          </span>
-        </div>
-      </section>
+      <Hero />
       <section id={styles.about}>
         <header>
           <h1>About Us</h1>
