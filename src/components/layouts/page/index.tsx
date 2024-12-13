@@ -1,13 +1,19 @@
-import React, { PropsWithChildren, useEffect } from 'react';
+import React, { PropsWithChildren, useEffect, useLayoutEffect } from 'react';
 import { useOutletContext } from 'react-router-dom';
 
 interface IPage {
   pageStyle: string;
+  showFooter?: boolean;
 }
 
-function Page({pageStyle, children}: PropsWithChildren<IPage>) {
-  const { parentRef } = useOutletContext<{ parentRef: React.RefObject<HTMLDivElement> }>();
-  
+function Page({pageStyle, showFooter, children}: PropsWithChildren<IPage>) {
+  const { parentRef, setShowFooter } = useOutletContext<{ parentRef: React.RefObject<HTMLDivElement>, setShowFooter: React.Dispatch<React.SetStateAction<boolean>> }>();
+  useLayoutEffect(() => {
+    if (showFooter === false) {
+      setShowFooter(false)
+    }
+    else setShowFooter(true)
+  }, [])
   useEffect(() => {
     if (parentRef.current && pageStyle) {
       parentRef.current.classList.add(pageStyle); // Change background color

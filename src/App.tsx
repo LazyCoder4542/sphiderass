@@ -7,6 +7,7 @@ import Blogs from './pages/blogs';
 import Blog from './pages/blog';
 import Team from './pages/team';
 import Work from './pages/work';
+import Page404 from './pages/404';
 // import Login from './pages/auth/Login';
 // import Register from './pages/auth/Register';
 import Layout from './layout';
@@ -28,6 +29,7 @@ const router = createBrowserRouter(
       <Route path="blog/*" element={<Blog />} />
       <Route path="team" element={<Team />} />
       <Route path="jobs" element={<Work />} />
+      <Route path="*" element={<Page404 />} />
       {/* <Route path="login" element={<Login />} />
       <Route path="register" element={<Register />} /> */}
     </Route>

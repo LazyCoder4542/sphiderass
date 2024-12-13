@@ -1,3 +1,4 @@
+import { useColorMode } from "@/components/ui/color-mode";
 import {
   createContext,
   useState,
@@ -21,7 +22,10 @@ const ThemeContext = createContext<IThemeContext>(defTheme);
 const ThemeProvider = ({ children }: PropsWithChildren) => {
   const toggleMode = useCallback((mode: "dark" | "light") => {
     setTheme(() => ({...theme, mode}))
+    chakraMode.setColorMode(mode)
   }, [])
+
+  const chakraMode = useColorMode()
 
   const [theme, setTheme] = useState(() => {
     let mode = defTheme.mode

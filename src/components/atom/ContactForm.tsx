@@ -14,6 +14,7 @@ import {
   FileUploadRoot,
   FileUploadTrigger,
 } from "@/components/ui/file-upload";
+import { Field } from "@/components/ui/field"
 import { HiUpload } from "react-icons/hi";
 import { RiArrowRightLine } from "react-icons/ri";
 
@@ -54,11 +55,7 @@ export default function ContactForm() {
           ))}
         </SelectContent>
       </SelectRoot>
-      <SelectRoot
-        collection={budget}
-        size="md"
-        name="budget"
-      >
+      <SelectRoot collection={budget} size="md" name="budget">
         {/* <SelectLabel>Select framework</SelectLabel> */}
         <SelectTrigger>
           <SelectValueText placeholder="Your budget (USD)" />
@@ -99,6 +96,30 @@ export default function ContactForm() {
           <FileUploadList />
         </FileUploadRoot>
       </Flex>
+      <Button backgroundColor={"#BD7500"}>
+        Request a Quote <RiArrowRightLine />
+      </Button>
+    </form>
+  );
+}
+export function ContactFormTwo() {
+  return (
+    <form action="" className={styles.form}>
+      <Field label="Name" required>
+        <Input placeholder="name" name="name" />
+      </Field>
+      <Field label="Country" required>
+        <Input placeholder="nigeria" name="country" />
+      </Field>
+      <Field label="Email address" required>
+        <Input placeholder="johndoe@gmail.com" name="email" type="email" />
+      </Field>
+      <Field label="Phone number" required>
+        <Input placeholder="+234" name="phone" type="tel" />
+      </Field>
+      <Field label="Message" required>
+        <Textarea placeholder="Type your message" name="message" size="lg" rows={8}/>
+      </Field>
       <Button backgroundColor={"#BD7500"}>
         Request a Quote <RiArrowRightLine />
       </Button>

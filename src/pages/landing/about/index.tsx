@@ -99,7 +99,7 @@ function About() {
       </section>
       <section id={styles.question}>
         <div>
-          <h3>Have a Question We are here to help!</h3>
+          <h3>Have a <span>Question?</span> We are here to help!</h3>
           <p>
             Our team is ready to assist you with any questions or concerns you
             may have. Whether you need more information about our services, want

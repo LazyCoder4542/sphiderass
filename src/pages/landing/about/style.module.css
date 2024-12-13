@@ -117,6 +117,12 @@
   gap: 1rem;
   align-items: flex-start;
 } 
+#question > div:nth-child(1) > h3 > span {
+  color: #BD7500;
+  background-image: url(/icons/pattern/pattern6.svg);
+  background-size: 100% 100%;
+  padding: 16px 10px;
+}
 #question > div:nth-child(1) > div {
   width: 150px;
 }

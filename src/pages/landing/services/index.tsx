@@ -1,4 +1,4 @@
-import ContactForm from "@/components/atom/ContactForm";
+import { ContactFormTwo } from "@/components/atom/ContactForm";
 import Page from "../../../components/layouts/page";
 import styles from "./style.module.css";
 function Services() {
@@ -110,7 +110,7 @@ function Services() {
             </p>
           </header>
           <div>
-            <ContactForm />
+            <ContactFormTwo />
           </div>
         </div>
         <img src="images/illustrations/illus17.jpeg" alt="" />
