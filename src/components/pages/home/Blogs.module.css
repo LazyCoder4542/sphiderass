@@ -63,8 +63,10 @@
 #blog > .blogs .blog > div > div:nth-child(1) > h4 > span {
   float: right;
 }
-#blog > .blogs .blog > div > .btn {
+#blog > .blogs .blog > div > a {
   align-self: flex-start;
+}
+#blog > .blogs .blog > div .btn {
   width: 150px;
   font-weight: normal;
   font-size: 1rem;

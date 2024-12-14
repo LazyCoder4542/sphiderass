@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "./Portfolio.module.css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css/core";
@@ -136,35 +136,32 @@ function Portfolio() {
             </SplideSlide>
           </Splide>
         </div>
-        <div
-          className={`see_more btn`}
-          onClick={() => {
-            navigate("/portfolio");
-          }}
-        >
-          <span>View my projects</span>
-          <span>
-            <svg
-              width="25"
-              height="26"
-              viewBox="0 0 25 26"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g id="Frame">
-                <g id="Group">
-                  <path
-                    id="Vector"
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M9.37331 5.27734L17.0962 13.0003L9.37331 20.7232L7.90039 19.2503L14.1504 13.0003L7.90039 6.75026L9.37331 5.27734Z"
-                    fill="#FCFCFC"
-                  />
+        <Link to="/portfolio">
+          <div className={`see_more btn`}>
+            <span>View my projects</span>
+            <span>
+              <svg
+                width="25"
+                height="26"
+                viewBox="0 0 25 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="Frame">
+                  <g id="Group">
+                    <path
+                      id="Vector"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M9.37331 5.27734L17.0962 13.0003L9.37331 20.7232L7.90039 19.2503L14.1504 13.0003L7.90039 6.75026L9.37331 5.27734Z"
+                      fill="#FCFCFC"
+                    />
+                  </g>
                 </g>
-              </g>
-            </svg>
-          </span>
-        </div>
+              </svg>
+            </span>
+          </div>
+        </Link>
       </div>
     </section>
   );

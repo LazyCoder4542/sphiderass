@@ -16,7 +16,7 @@
 #join > header > p {
   color: #666A66;
 }
-#join > header > div {
+#join > header div.btn {
   margin-top: 1rem;
   border-radius: 99px;
   padding-inline: 1rem;

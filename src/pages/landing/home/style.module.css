@@ -35,7 +35,7 @@
   max-width: 600px;
   font-size: 1.5rem;
 }
-#about > div > div:nth-child(1) > .btn {
+#about > div > div:nth-child(1) .btn {
   align-self: flex-start;
   width: 200px;
 }
@@ -69,7 +69,7 @@
 #about > div > div:nth-child(2) > div > div > p {
   font-size: 18px;
 }
-#about > div > div:nth-child(2) > div > div > .btn {
+#about > div > div:nth-child(2) > div > div .btn {
   align-self: center;
   width: 200px;
 }
@@ -189,6 +189,9 @@
   height: 100%;
   object-fit: contain;
   object-position: center;
+}
+#services > div > a {
+  align-self: center;
 }
 
 

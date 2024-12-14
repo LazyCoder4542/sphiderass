@@ -1,6 +1,8 @@
+import { generateKey } from "@/pages/blogs";
 import styles from "./Blogs.module.css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css/core";
+import { Link } from "react-router-dom";
 function Blogs() {
   return (
     <section id={styles.blog}>
@@ -44,7 +46,11 @@ function Blogs() {
                     colleagues and impress your managers?
                   </p>
                 </div>
-                <div className={`${styles.btn} btn btn-primary`}>Read More</div>
+                <Link to={`/blog/${generateKey()}`}>
+                  <div className={`${styles.btn} btn btn-primary`}>
+                    Read More
+                  </div>
+                </Link>
               </div>
             </div>
           </SplideSlide>
@@ -61,11 +67,15 @@ function Blogs() {
                     </span>
                   </h4>
                   <p>
-                    Linear helps streamline software projects, sprints, tasks, and
-                    bug tracking. Here’s how to get started.
+                    Linear helps streamline software projects, sprints, tasks,
+                    and bug tracking. Here’s how to get started.
                   </p>
                 </div>
-                <div className={`${styles.btn} btn btn-primary`}>Read More</div>
+                <Link to={`/blog/${generateKey()}`}>
+                  <div className={`${styles.btn} btn btn-primary`}>
+                    Read More
+                  </div>
+                </Link>
               </div>
             </div>
           </SplideSlide>

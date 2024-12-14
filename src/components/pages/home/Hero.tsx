@@ -11,6 +11,7 @@ import {
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import "@splidejs/react-splide/css/core";
+import { Link } from "react-router-dom";
 function Hero() {
   return (
     <section id={styles.hero}>
@@ -22,9 +23,11 @@ function Hero() {
           at Sphiderass we are dedicated to helping businesses thrive in the
           ever evolving digital spaces
         </p>
-        <div className={`${styles.btn} btn btn-primary`}>
-          Explore our Services
-        </div>
+        <Link to="/services">
+          <div className={`${styles.btn} btn btn-primary`}>
+            Explore our Services
+          </div>
+        </Link>
       </header>
       <div className={styles.tech}>
         <Splide

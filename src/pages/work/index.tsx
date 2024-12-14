@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Page from "../../components/layouts/page";
 import styles from "./style.module.css";
 function Work() {
@@ -13,7 +14,9 @@ function Work() {
             ready to make an impact and work in an environment where your ideas
             are heard, we’d love to hear from you!
           </p>
-          <div className="btn btn-primary">See Open Positions</div>
+          <Link to="#openings">
+            <div className="btn btn-primary">See Open Positions</div>
+          </Link>
         </header>
         <div>
           <div>
@@ -68,7 +71,7 @@ function Work() {
           </div>
         </div>
       </section>
-      <section id={styles.opening} className={styles.job__section}>
+      <section id="openings" className={styles.job__section}>
         <header>
           <h2>Current Job Openings</h2>
           <p>Which of these positions would you like to apply for?</p>
@@ -232,7 +235,7 @@ function Work() {
           </div>
         </div>
       </section>
-      <section id={styles.opening} className={styles.job__section}>
+      <section id="internships" className={styles.job__section}>
         <header>
           <h2>Available Internship Programs</h2>
           <p>

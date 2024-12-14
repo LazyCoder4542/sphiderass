@@ -1,6 +1,6 @@
-import { useNavigate } from "react-router-dom";
-import Page from "../../../components/layouts/page";
-import Testimonials from "../../../components/pages/home/Testimonials";
+import { Link } from "react-router-dom";
+import Page from "@/components/layouts/page";
+import Testimonials from "@/components/pages/home/Testimonials";
 import { useTheme } from "../../../context/theme";
 import styles from "./style.module.css";
 import ContactForm from "@/components/atom/ContactForm";
@@ -9,7 +9,6 @@ import Blogs from "@/components/pages/home/Blogs";
 import Hero from "@/components/pages/home/Hero";
 const Home = () => {
   const { mode } = useTheme();
-  const navigate = useNavigate();
   return (
     <Page pageStyle={styles.page}>
       <Hero />
@@ -26,7 +25,9 @@ const Home = () => {
               goals to create impactful solutions that drive user engagement and
               business success.
             </p>
-            <div className={`${styles.btn} btn btn-secondary`}>Read more</div>
+            <Link to="/about">
+              <div className={`${styles.btn} btn btn-secondary`}>Read more</div>
+            </Link>
           </div>
           <div>
             <img src="images/illustrations/illus1.png"></img>
@@ -36,9 +37,11 @@ const Home = () => {
                   Our team consists of skilled professionals who bring a wealth
                   of experience to everything we do.
                 </p>
-                <div className={`${styles.btn} btn btn-primary`}>
-                  Meet the team
-                </div>
+                <Link to="/team">
+                  <div className={`${styles.btn} btn btn-primary`}>
+                    Meet the team
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
@@ -105,35 +108,34 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div
-            className={`see_more btn`}
-            onClick={() => {
-              navigate("/services");
-            }}
-          >
-            <span>See More</span>
-            <span>
-              <svg
-                width="25"
-                height="26"
-                viewBox="0 0 25 26"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g id="Frame">
-                  <g id="Group">
-                    <path
-                      id="Vector"
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M9.37331 5.27734L17.0962 13.0003L9.37331 20.7232L7.90039 19.2503L14.1504 13.0003L7.90039 6.75026L9.37331 5.27734Z"
-                      fill="#FCFCFC"
-                    />
+          <Link to="/services">
+            <div
+              className={`see_more btn`}
+            >
+              <span>See More</span>
+              <span>
+                <svg
+                  width="25"
+                  height="26"
+                  viewBox="0 0 25 26"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Frame">
+                    <g id="Group">
+                      <path
+                        id="Vector"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.37331 5.27734L17.0962 13.0003L9.37331 20.7232L7.90039 19.2503L14.1504 13.0003L7.90039 6.75026L9.37331 5.27734Z"
+                        fill="#FCFCFC"
+                      />
+                    </g>
                   </g>
-                </g>
-              </svg>
-            </span>
-          </div>
+                </svg>
+              </span>
+            </div>
+          </Link>
         </div>
       </section>
       <Portfolio />

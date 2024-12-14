@@ -30,7 +30,7 @@
   max-width: 40rem;
   font-size: 1.2rem;
 }
-#hero > header > .btn {
+#hero > header .btn {
   margin-top: 1rem;
   padding-inline: 2rem;
 }

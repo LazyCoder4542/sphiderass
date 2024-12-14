@@ -54,6 +54,10 @@ body {
   color: var(--text-color)
 }
 
+a:hover {
+  color: #003800
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold
 }
@@ -102,6 +106,7 @@ h5 {
 }
 
 .see_more {
+  color: var(--text-color);
   align-self: center;
   position: relative;
   /* background-color: red; */

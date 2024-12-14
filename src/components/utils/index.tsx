@@ -7,13 +7,16 @@ function ScrollToTop() {
 
   useEffect(() => {
     if (hash) {
+      const element = document.getElementById(hash.replace("#", ""));
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     } else {
-      console.log(performance.getEntriesByType("navigation"));
       if (navigationType !== "POP") {
         window.scrollTo(0, 0);
       }
     }
-  }, [pathname]); // Run this effect whenever the path changes
+  }, [pathname, hash]); // Run this effect whenever the path changes
 
   return null; // This component doesn't render anything
 }

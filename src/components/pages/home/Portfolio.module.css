@@ -87,6 +87,9 @@
   transition-property: color, background-color;
   transition-duration: 500ms;
 }
+#portfolio > div > a {
+  align-self: center;
+}
 
 @media screen and (max-width: 1024px ) {
   #portfolio > div > nav {

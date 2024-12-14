@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Page from "../../components/layouts/page";
 import styles from "./style.module.css";
 
@@ -50,7 +50,6 @@ function Blogs() {
 export default Blogs;
 
 function BlogCard() {
-  const navigate = useNavigate()
   return (
     <div className={styles.card}>
       <div className={styles.image}>
@@ -73,19 +72,18 @@ function BlogCard() {
           </div>
         </div>
       </div>
-      <div onClick={() => {
-        navigate(`/blog/${generateKey()}`)
-      }} className="btn">Read More</div>
+      <Link to={`/blog/${generateKey()}`}>
+        <div className="btn">Read More</div>
+      </Link>
     </div>
   );
 }
-function generateKey(length = 5) {
-  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  let key = '';
+export function generateKey(length = 5) {
+  const characters =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  let key = "";
   for (let i = 0; i < length; i++) {
     key += characters.charAt(Math.floor(Math.random() * characters.length));
   }
   return key;
 }
-
-console.log(generateKey());

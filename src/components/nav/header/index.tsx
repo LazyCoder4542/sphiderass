@@ -168,7 +168,7 @@ function Header() {
               </li>
               <li>
                 <NavLink
-                  to="/career"
+                  to="/jobs#openings"
                   className={({ isActive, isPending }) => {
                     return isPending
                       ? styles.pending
