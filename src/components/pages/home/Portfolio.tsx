@@ -1,9 +1,8 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styles from "./Portfolio.module.css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css/core";
 function Portfolio() {
-  const navigate = useNavigate();
   return (
     <section id={styles.portfolio}>
       <header>
