@@ -1,11 +1,22 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import styles from "./style.module.css";
-import { useState } from "react";
+import {
+  MenuContent,
+  MenuItem,
+  MenuRoot,
+  MenuTrigger,
+} from "@/components/ui/menu";
+import { useEffect, useState } from "react";
 import { useTheme } from "../../../context/theme";
+import { HStack } from "@chakra-ui/react";
 function Header() {
   const [navOpen, setNavOpen] = useState(false);
-  const {mode} = useTheme();
-  const navigate = useNavigate()
+  const { mode } = useTheme();
+  const {pathname, hash} = useLocation()
+  const navigate = useNavigate();
+  useEffect(() => {
+    setNavOpen(false)
+  }, [pathname, hash])
   return (
     <>
       <header id={styles["site-header"]}>
@@ -15,11 +26,6 @@ function Header() {
         <nav
           data-open={navOpen}
           tabIndex={0}
-          onBlur={() => {
-            setTimeout(() => {
-              setNavOpen(false);
-            }, 200)
-          }}
         >
           <div
             className={styles.button}
@@ -60,7 +66,6 @@ function Header() {
                 height="32"
                 viewBox="0 0 1024 1024"
                 fill="currentColor"
-
               >
                 <path d="M195.2 195.2a64 64 0 0 1 90.496 0L512 421.504 738.304 195.2a64 64 0 0 1 90.496 90.496L602.496 512 828.8 738.304a64 64 0 0 1-90.496 90.496L512 602.496 285.696 828.8a64 64 0 0 1-90.496-90.496L421.504 512 195.2 285.696a64 64 0 0 1 0-90.496"></path>
               </svg>
@@ -82,41 +87,48 @@ function Header() {
                   Home
                 </NavLink>
               </li>
-              <li>
-                <NavLink
-                  to="/about"
-                  className={({ isActive, isPending }) => {
-                    return isPending
-                      ? styles.pending
-                      : isActive
-                      ? styles.active
-                      : "";
-                  }}
-                >
-                  About Us
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="21"
-                    height="21"
-                    fill="none"
-                    viewBox="0 0 21 21"
-                  >
-                    <g id="vuesax/linear/arrow-down">
-                      <g id="arrow-down">
-                        <path
-                          id="Vector"
-                          stroke="currentColor"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeMiterlimit="10"
-                          strokeWidth="1.5"
-                          d="m17.1 7.959-5.433 5.433a1.655 1.655 0 0 1-2.334 0L3.9 7.96"
-                        ></path>
+              <MenuRoot>
+                <MenuTrigger asChild>
+                  <li>
+                    <HStack>
+                    About
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="21"
+                      height="21"
+                      fill="none"
+                      viewBox="0 0 21 21"
+                    >
+                      <g id="vuesax/linear/arrow-down">
+                        <g id="arrow-down">
+                          <path
+                            id="Vector"
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeMiterlimit="10"
+                            strokeWidth="1.5"
+                            d="m17.1 7.959-5.433 5.433a1.655 1.655 0 0 1-2.334 0L3.9 7.96"
+                          ></path>
+                        </g>
                       </g>
-                    </g>
-                  </svg>
-                </NavLink>
-              </li>
+                    </svg>
+                    </HStack>
+                  </li>
+                </MenuTrigger>
+                <MenuContent>
+                  <MenuItem asChild value="about">
+                    <Link to="/about">
+                      About Us
+                    </Link>
+                  </MenuItem>
+                  <MenuItem asChild value="team">
+                    <Link to="/team">
+                      Team
+                    </Link>
+                  </MenuItem>
+                </MenuContent>
+              </MenuRoot>
               <li>
                 <NavLink
                   to="/services"
@@ -129,27 +141,6 @@ function Header() {
                   }}
                 >
                   Services
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="21"
-                    height="21"
-                    fill="none"
-                    viewBox="0 0 21 21"
-                  >
-                    <g id="vuesax/linear/arrow-down">
-                      <g id="arrow-down">
-                        <path
-                          id="Vector"
-                          stroke="currentColor"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeMiterlimit="10"
-                          strokeWidth="1.5"
-                          d="m17.1 7.959-5.433 5.433a1.655 1.655 0 0 1-2.334 0L3.9 7.96"
-                        ></path>
-                      </g>
-                    </g>
-                  </svg>
                 </NavLink>
               </li>
               <li>
@@ -185,10 +176,12 @@ function Header() {
               <div>
                 <img src="/icons/search.svg" alt="search" />
               </div>
-              <div className="btn btn-primary"
-              onClick={() => {
-                navigate("/jobs")
-              }}>
+              <div
+                className="btn btn-primary"
+                onClick={() => {
+                  navigate("/jobs");
+                }}
+              >
                 Work with us
                 <span>
                   <img src="/icons/arrow.svg" alt="" />

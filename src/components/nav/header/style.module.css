@@ -30,6 +30,12 @@
   gap: 2rem;
   font-size: 20px;
 }
+#site-header > nav > div:nth-child(2) > ul > li {
+  cursor: pointer;
+}
+#site-header > nav > div:nth-child(2) > ul > li[data-state="open"] {
+  color: #5a3800;
+}
 #site-header > nav > div:nth-child(2) > ul a {
   display: flex;
   align-items: center;
