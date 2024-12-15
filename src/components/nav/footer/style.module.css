@@ -47,7 +47,7 @@
   flex-direction: column;
   gap: .5rem;
 }
-#site-footer > .main > .socials > div {
+#site-footer > .main > .socials div {
   display: flex;
   flex-wrap: nowrap;
   background-color: #141414;
@@ -56,13 +56,13 @@
   gap: .5rem;
   cursor: pointer;
 }
-#site-footer > .main > .socials > div > span {
+#site-footer > .main > .socials  div > span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   color: white
 }
-#site-footer > .main > .socials > div > span:nth-child(1) {
+#site-footer > .main > .socials div > span:nth-child(1) {
   width: 2rem;
   padding-right: .5rem;
   border-right: 3px solid #262626;
