@@ -60,21 +60,18 @@
   #executives > div {
     gap: 2rem;
   }
-  #team > div {
-    grid-template-columns: repeat(2, 1fr);
+  #executives .card > div:nth-child(2) > span:nth-child(3) {
+    font-size: .75rem;
   }
 }
-@media screen and (max-width: 500px ) {
+@media screen and (max-width: 600px ) {
   #executives {
     padding: 2rem var(--page-padding);
   }
-  #executives > div,  #team > div {
+  #executives > div{ 
     gap: 2rem 1rem;
-    /* grid-template-columns: 2fr; */
-  }
-}
-@media screen and (max-width: 380px ) {
-  #executives > div,  #team > div {
     grid-template-columns: 1fr;
   }
 }
+/* @media screen and (max-width: 380px ) {
+} */
