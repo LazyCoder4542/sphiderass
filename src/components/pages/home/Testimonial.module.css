@@ -29,6 +29,7 @@
 }
 #testimonials > :global(div.is-active) :global(.splide__pagination) {
   gap: .5rem;
+  position: relative;
   margin-top: 1rem;
 }
 #testimonials > :global(div.is-active) :global(.splide__pagination) :global(button) {

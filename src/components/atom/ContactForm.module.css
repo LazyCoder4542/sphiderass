@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+  color: #061c3d;
 }
 .form > *:nth-child(n+5) {
   grid-column: 1 / 3;

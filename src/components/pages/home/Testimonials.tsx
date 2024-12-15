@@ -1,5 +1,5 @@
 import styles from "./Testimonial.module.css";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import '@splidejs/react-splide/css/core';
 function Testimonials() {
   return (
@@ -8,6 +8,7 @@ function Testimonials() {
         <h2>What Our Clients Are Saying</h2>
       </header>
       <Splide
+        hasTrack={false}
         options={{
           type: 'loop',
           arrows: false,
@@ -24,38 +25,40 @@ function Testimonials() {
           },
         }}
       >
-        <SplideSlide>
-          <Testimonial
-            name="Dunsin Oyekan"
-            image="images/profile/Dunsin_Oyekan.jpeg"
-            designation="CEO of The Great Commission"
-            testimony="Sphiderass is a remarkable company that truly values excellence and integrity. Their team is incredibly professional, and they consistently go above and beyond. They always meet deadlines, offering outstanding value throughout the entire process."
-          />
-        </SplideSlide>
-        <SplideSlide>
-          <Testimonial
-            name="Dunsin Oyekan"
-            image="images/profile/Dunsin_Oyekan.jpeg"
-            designation="CEO of The Great Commission"
-            testimony="Sphiderass is a remarkable company that truly values excellence and integrity. Their team is incredibly professional, and they consistently go above and beyond. They always meet deadlines, offering outstanding value throughout the entire process."
-          />
-        </SplideSlide>
-        <SplideSlide>
-          <Testimonial
-            name="Dunsin Oyekan"
-            image="images/profile/Dunsin_Oyekan.jpeg"
-            designation="CEO of The Great Commission"
-            testimony="Sphiderass is a remarkable company that truly values excellence and integrity. Their team is incredibly professional, and they consistently go above and beyond. They always meet deadlines, offering outstanding value throughout the entire process."
-          />
-        </SplideSlide>
-        <SplideSlide>
-          <Testimonial
-            name="Dunsin Oyekan"
-            image="images/profile/Dunsin_Oyekan.jpeg"
-            designation="CEO of The Great Commission"
-            testimony="Sphiderass is a remarkable company that truly values excellence and integrity. Their team is incredibly professional, and they consistently go above and beyond. They always meet deadlines, offering outstanding value throughout the entire process."
-          />
-        </SplideSlide>
+        <SplideTrack>
+          <SplideSlide>
+            <Testimonial
+              name="Dunsin Oyekan"
+              image="images/profile/Dunsin_Oyekan.jpeg"
+              designation="CEO of The Great Commission"
+              testimony="Sphiderass is a remarkable company that truly values excellence and integrity. Their team is incredibly professional, and they consistently go above and beyond. They always meet deadlines, offering outstanding value throughout the entire process."
+            />
+          </SplideSlide>
+          <SplideSlide>
+            <Testimonial
+              name="Dunsin Oyekan"
+              image="images/profile/Dunsin_Oyekan.jpeg"
+              designation="CEO of The Great Commission"
+              testimony="Sphiderass is a remarkable company that truly values excellence and integrity. Their team is incredibly professional, and they consistently go above and beyond. They always meet deadlines, offering outstanding value throughout the entire process."
+            />
+          </SplideSlide>
+          <SplideSlide>
+            <Testimonial
+              name="Dunsin Oyekan"
+              image="images/profile/Dunsin_Oyekan.jpeg"
+              designation="CEO of The Great Commission"
+              testimony="Sphiderass is a remarkable company that truly values excellence and integrity. Their team is incredibly professional, and they consistently go above and beyond. They always meet deadlines, offering outstanding value throughout the entire process."
+            />
+          </SplideSlide>
+          <SplideSlide>
+            <Testimonial
+              name="Dunsin Oyekan"
+              image="images/profile/Dunsin_Oyekan.jpeg"
+              designation="CEO of The Great Commission"
+              testimony="Sphiderass is a remarkable company that truly values excellence and integrity. Their team is incredibly professional, and they consistently go above and beyond. They always meet deadlines, offering outstanding value throughout the entire process."
+            />
+          </SplideSlide>
+        </SplideTrack>
       </Splide>
     </section>
   );

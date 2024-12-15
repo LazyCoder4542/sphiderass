@@ -49,7 +49,7 @@ export default function ContactForm() {
         </SelectTrigger>
         <SelectContent>
           {services.items.map((service) => (
-            <SelectItem item={service} key={service.value}>
+            <SelectItem item={service} color={"black"} key={service.value}>
               {service.label}
             </SelectItem>
           ))}
@@ -62,7 +62,7 @@ export default function ContactForm() {
         </SelectTrigger>
         <SelectContent>
           {budget.items.map((b) => (
-            <SelectItem item={b} key={b.value}>
+            <SelectItem item={b} color={"black"}  key={b.value}>
               {b.label}
             </SelectItem>
           ))}

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./Portfolio.module.css";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css/core";
 function Portfolio() {
   return (
@@ -52,9 +52,10 @@ function Portfolio() {
         </nav>
         <div className={styles.samples}>
           <Splide
+          hasTrack={false}
             options={{
               arrows: false,
-              // pagination: false,
+              pagination: false,
               drag: true,
               mediaQuery: "min",
               breakpoints: {
@@ -64,75 +65,77 @@ function Portfolio() {
               },
             }}
           >
-            <SplideSlide>
-              <div className={styles.sample}>
-                <img src="images/illustrations/illus5.png" alt="" />
-                <div>
-                  <span>Homeworx</span>
-                  <span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="106"
-                      height="8"
-                      fill="none"
-                      viewBox="0 0 106 8"
-                    >
-                      <path
-                        id="Line 7"
-                        fill="currentColor"
-                        d="M105.355 4.096a.51.51 0 0 0-.011-.722L102.052.176a.51.51 0 0 0-.711.732l2.927 2.843-2.843 2.926a.51.51 0 1 0 .732.71zM.007 5.772 104.996 4.25l-.014-1.02L-.008 4.752z"
-                      ></path>
-                    </svg>
-                  </span>
+            <SplideTrack>
+              <SplideSlide>
+                <div className={styles.sample}>
+                  <img src="images/illustrations/illus5.png" alt="" />
+                  <div>
+                    <span>Homeworx</span>
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="106"
+                        height="8"
+                        fill="none"
+                        viewBox="0 0 106 8"
+                      >
+                        <path
+                          id="Line 7"
+                          fill="currentColor"
+                          d="M105.355 4.096a.51.51 0 0 0-.011-.722L102.052.176a.51.51 0 0 0-.711.732l2.927 2.843-2.843 2.926a.51.51 0 1 0 .732.71zM.007 5.772 104.996 4.25l-.014-1.02L-.008 4.752z"
+                        ></path>
+                      </svg>
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </SplideSlide>
-            <SplideSlide>
-              <div className={styles.sample}>
-                <img src="images/illustrations/illus5.png" alt="" />
-                <div>
-                  <span>Homeworx</span>
-                  <span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="106"
-                      height="8"
-                      fill="none"
-                      viewBox="0 0 106 8"
-                    >
-                      <path
-                        id="Line 7"
-                        fill="currentColor"
-                        d="M105.355 4.096a.51.51 0 0 0-.011-.722L102.052.176a.51.51 0 0 0-.711.732l2.927 2.843-2.843 2.926a.51.51 0 1 0 .732.71zM.007 5.772 104.996 4.25l-.014-1.02L-.008 4.752z"
-                      ></path>
-                    </svg>
-                  </span>
+              </SplideSlide>
+              <SplideSlide>
+                <div className={styles.sample}>
+                  <img src="images/illustrations/illus5.png" alt="" />
+                  <div>
+                    <span>Homeworx</span>
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="106"
+                        height="8"
+                        fill="none"
+                        viewBox="0 0 106 8"
+                      >
+                        <path
+                          id="Line 7"
+                          fill="currentColor"
+                          d="M105.355 4.096a.51.51 0 0 0-.011-.722L102.052.176a.51.51 0 0 0-.711.732l2.927 2.843-2.843 2.926a.51.51 0 1 0 .732.71zM.007 5.772 104.996 4.25l-.014-1.02L-.008 4.752z"
+                        ></path>
+                      </svg>
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </SplideSlide>
-            <SplideSlide>
-              <div className={styles.sample}>
-                <img src="images/illustrations/illus5.png" alt="" />
-                <div>
-                  <span>Homeworx</span>
-                  <span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="106"
-                      height="8"
-                      fill="none"
-                      viewBox="0 0 106 8"
-                    >
-                      <path
-                        id="Line 7"
-                        fill="currentColor"
-                        d="M105.355 4.096a.51.51 0 0 0-.011-.722L102.052.176a.51.51 0 0 0-.711.732l2.927 2.843-2.843 2.926a.51.51 0 1 0 .732.71zM.007 5.772 104.996 4.25l-.014-1.02L-.008 4.752z"
-                      ></path>
-                    </svg>
-                  </span>
+              </SplideSlide>
+              <SplideSlide>
+                <div className={styles.sample}>
+                  <img src="images/illustrations/illus5.png" alt="" />
+                  <div>
+                    <span>Homeworx</span>
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="106"
+                        height="8"
+                        fill="none"
+                        viewBox="0 0 106 8"
+                      >
+                        <path
+                          id="Line 7"
+                          fill="currentColor"
+                          d="M105.355 4.096a.51.51 0 0 0-.011-.722L102.052.176a.51.51 0 0 0-.711.732l2.927 2.843-2.843 2.926a.51.51 0 1 0 .732.71zM.007 5.772 104.996 4.25l-.014-1.02L-.008 4.752z"
+                        ></path>
+                      </svg>
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </SplideSlide>
+              </SplideSlide>
+            </SplideTrack>
           </Splide>
         </div>
         <Link to="/portfolio">
