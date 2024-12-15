@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useTheme } from "../../../context/theme";
 import styles from "./style.module.css";
 function Footer() {
@@ -19,10 +20,10 @@ function Footer() {
           <div>
             <span>QUICK LINKS</span>
             <ul>
-              <li>About</li>
-              <li>Services</li>
-              <li>Blogs</li>
-              <li>Career</li>
+              <li><Link to="/about">About</Link></li>
+              <li><Link to="/services">Services</Link></li>
+              <li><Link to="/blogs">Blogs</Link></li>
+              <li><Link to="/work#openings">Career</Link></li>
             </ul>
           </div>
           <div>
